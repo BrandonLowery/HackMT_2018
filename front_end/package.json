@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "^4.16.2",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "siege": "^0.2.0"
   }
 }
