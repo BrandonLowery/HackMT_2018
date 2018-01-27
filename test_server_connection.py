@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector.cursor import MySQLCursorPrepared #new
 
-cnx = mysql.connector.connect(user='brandon', password='lowery',
+cnx = mysql.connector.connect(user='username_here', password='password_here',
                               host='104.198.251.11',
                               database='data')
 
