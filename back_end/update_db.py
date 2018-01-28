@@ -44,7 +44,8 @@ class database_update():
         cursor = cnx.cursor(prepared=True) #new
         cursor = cnx.cursor(buffered=True)
         query = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
-        cursor.execute(query, (self.car_count,"kom"))
+        cursor.execute(query, (self.car_count,self.id))
+        cnx.commit()
         cursor.close()
     def sub(self):
         self.car_count -= 1
@@ -53,7 +54,6 @@ class database_update():
         cursor = cnx.cursor(prepared=True) #new
         cursor = cnx.cursor(buffered=True)
         query = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
-        cursor.execute(query, (self.car_count,"kom"))
+        cursor.execute(query, (self.car_count,self.id))
+        cnx.commit()
         cursor.close()
-
-

@@ -13,9 +13,10 @@ cursor = cnx.cursor(prepared=True) #new
 cursor = cnx.cursor(buffered=True)
 
 k = 21
-x = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
+#x = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
 
-cursor.execute(x, (k,"kom"))
+#cursor.execute(x, (k,"kom"))
+#cnx.commit()
 
 query = ("SELECT car_count FROM LOT_INFO WHERE lot_name = %s")
 
