@@ -3,7 +3,7 @@
 
 import mysql.connector
 from mysql.connector.cursor import MySQLCursorPrepared #new
-cnx = mysql.connector.connect(user='brandon', password='lowery',
+cnx = mysql.connector.connect(user='kyle', password='lutz',
                               host='104.198.251.11',
                               database='data')
 
@@ -55,3 +55,5 @@ class database_update():
         query = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
         cursor.execute(query, (self.car_count,"kom"))
         cursor.close()
+
+
