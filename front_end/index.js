@@ -11,6 +11,7 @@ var con = mysql.createConnection({
 });
 var car_count;
 var lot_max;
+var difference;
 var lot = "kom";
 
 
@@ -20,9 +21,17 @@ con.connect(function(err){
   con.query("SELECT car_count FROM LOT_INFO WHERE lot_name = 'kom'", function(err, result, fields){
     if(err) throw err;
     car_count = JSON.stringify(result[0].car_count);
+    con.query("SELECT lot_count_max FROM LOT_INFO WHERE lot_name = 'kom'", function(err, result, fields){
+      if(err) throw err;
+      lot_max = JSON.stringify(result[0].lot_count_max);
+      difference = lot_max - car_count;
+      console.log(`lot max = ${lot_max}`);
+      console.log(`car count = ${car_count}`);
+      console.log(`difference2 = ${difference}`);
 
-  });
-  console.log(car_count);
+    });
+  });      console.log(`difference1 = ${difference}`);
+
 
 
 });
