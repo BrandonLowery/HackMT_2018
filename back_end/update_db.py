@@ -29,7 +29,7 @@ class database_update():
             count = row
 
         cursor.close()
-        cnx.close()
+        #cnx.close()
 
 
         return count
@@ -39,17 +39,19 @@ class database_update():
 
     def add(self):
         self.car_count += 1
+        cursor = cnx.cursor(cursor_class=MySQLCursorPrepared) #new
 
+        cursor = cnx.cursor(prepared=True) #new
+        cursor = cnx.cursor(buffered=True)
+        query = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
+        cursor.execute(query, (self.car_count,"kom"))
+        cursor.close()
     def sub(self):
         self.car_count -= 1
+        cursor = cnx.cursor(cursor_class=MySQLCursorPrepared) #new
 
-kom = database_update("kom") #creates a db_update object named kom
-
-
-kom.add() #adds one to the count in the db for kom
-
-x = kom.get_count() #gives you kom lot count
-
-print(x)
-k = kom.get_id()
-print(k)
+        cursor = cnx.cursor(prepared=True) #new
+        cursor = cnx.cursor(buffered=True)
+        query = "UPDATE LOT_INFO SET car_count = (%s) WHERE lot_name = (%s)"
+        cursor.execute(query, (self.car_count,"kom"))
+        cursor.close()
