@@ -1,6 +1,6 @@
 # HackMT_2018
 
-Our project proposes to aide in the parking issues at MTSU. With the data collected by our program by cameras at the entrance to each parking lot, MTSU will be able to see how many cars are in each lot at all times. 
+Our project proposes to aide in the parking issues at MTSU. With the data collected with our program by cameras at the entrance to each parking lot(MTSU already has wifi in parking lots), MTSU will be able to see how many cars are in each lot at all times. 
 
 This information can be relayed via a simple campus map on mobile and students will be able to shave time off of their daily commutes by avoiding full lots.
 
